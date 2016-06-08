@@ -1,9 +1,9 @@
-<h1>Blog Posts</h1>
-
-<h3>Sample Post one</h3>
-<p>This is some sample text for our ruby blog</p>
-<hr>
-
-<h3>Sample Post two</h3>
-<p>This is some sample text for our ruby blog</p>
+<% @posts.each do |post|%>
+  <div class="post_wrapper">
+  <h2 class="title"><%= link_to post.title, post %></h2>
+	
+	<p> class="date"><%= post.created_at.strftime("%B ,%d, %Y") %></p>
+	</div>
+	
+<% end %>   
 
